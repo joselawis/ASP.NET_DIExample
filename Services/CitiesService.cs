@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using ServiceContracts;
 namespace Services;
 
-public class CitiesService
+public class CitiesService : ICitiesService
 {
     private List<string> _cities;
-    
-    public CitiesService(){
+
+    public CitiesService()
+    {
         _cities = new List<string>(){
             "London",
             "Paris",
@@ -14,7 +15,8 @@ public class CitiesService
         };
     }
 
-    public List<string> GetCities(){
+    public List<string> GetCities()
+    {
         return _cities;
     }
 }
