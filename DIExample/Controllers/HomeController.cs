@@ -17,8 +17,8 @@ namespace DIExample.Controllers
 
         [Route("/")]
         public IActionResult Index(){
-            _citiesService.GetCities();
-            return View();
+            List<string> cities = _citiesService.GetCities();
+            return View(cities);
         }
     }
 }
